@@ -6,7 +6,7 @@ api_key = "YOUR_API_KEY"
 # Install the API key
 openai.api_key = api_key
 
-def generate_answer(question, context, target_language="en", max_tokens=1000, temperature=1):
+def generate_answer(question, context, max_tokens=1000, temperature=1):
     # We are forming a query to GPT-3.5 for generating an answer to the question
     response = openai.Completion.create(
         engine="gpt-3.5-turbo-instruct",
@@ -27,6 +27,6 @@ question = input("Enter your question: ")
 context = input("Enter the context: ")
 
 # Generating the answer to the question with a high value of max_tokens
-russian_answer = generate_answer(question, context, target_language="ru", max_tokens=1000, temperature=1)
+gpt_answer = generate_answer(question, context, max_tokens=1000, temperature=1)
 print("Question:", question)
-print("Answer:", russian_answer)
+print("Answer:", gpt_answer)
