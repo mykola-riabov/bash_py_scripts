@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import openai
 
 # Replace YOUR_API_KEY with your OpenAI API key
